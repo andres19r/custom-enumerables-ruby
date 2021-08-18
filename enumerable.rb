@@ -46,4 +46,35 @@ module Enumerable
     end
     false
   end
+
+  def my_none?
+    i = 0
+    until i == size
+      return false if yield self[i]
+
+      i += 1
+    end
+    true
+  end
+
+  def my_count(arg = nil)
+    unless arg.nil?
+      c = 0
+      my_each do |el|
+        c += 1 if el == arg
+      end
+      return c
+    end
+    if block_given?
+      i = 0
+      count = 0
+      until i == size
+        count += 1 if yield self[i]
+        i += 1
+      end
+      count
+    else
+      size
+    end
+  end
 end

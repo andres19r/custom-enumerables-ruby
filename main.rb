@@ -36,3 +36,20 @@ puts 'Any?'
 p(numbers.any? { |num| num == 3 })
 puts 'My Any?'
 p(numbers.my_any? { |num| num == 3 })
+
+puts "\nmy_none? vs. none?"
+puts 'none?'
+p(numbers.none? { |num| num < 5 })
+puts 'my none?'
+p(numbers.my_none? { |num| num < 5 })
+
+puts "\nmy_count vs. count"
+numbers = [1, 2, 3, 2, 4, 5, 2]
+puts 'count'
+puts numbers.count
+puts numbers.count(2)
+puts(numbers.count { |num| num % 2 == 0 })
+puts 'my_count'
+puts numbers.my_count
+puts numbers.my_count(2)
+puts(numbers.my_count { |num| num % 2 == 0 })

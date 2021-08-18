@@ -27,6 +27,12 @@ p numb_even
 puts "\nmy_all? vs. all?"
 numbers = [1, 2, 3, 4, 5]
 puts 'All?'
-p (numbers.all? { |num| num < 3 })
+p(numbers.all? { |num| num < 3 })
 puts 'My All?'
-p (numbers.my_all? { |num| num < 3 })
+p(numbers.my_all? { |num| num < 3 })
+
+puts "\nmy_any? vs. any?"
+puts 'Any?'
+p(numbers.any? { |num| num == 3 })
+puts 'My Any?'
+p(numbers.my_any? { |num| num == 3 })

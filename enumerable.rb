@@ -26,4 +26,14 @@ module Enumerable
     end
     new_arr
   end
+
+  def my_all?
+    i = 0
+    until i == size
+      return false unless yield self[i]
+
+      i += 1
+    end
+    true
+  end
 end

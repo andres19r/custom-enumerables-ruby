@@ -53,3 +53,10 @@ puts 'my_count'
 puts numbers.my_count
 puts numbers.my_count(2)
 puts(numbers.my_count { |num| num % 2 == 0 })
+
+puts "\nmy_map vs. map"
+puts 'map'
+numbers = [1, 2, 3, 4]
+p(numbers.map { |i| i * i })
+puts 'my_map'
+p(numbers.my_map { |i| i * i })

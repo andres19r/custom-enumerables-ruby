@@ -77,4 +77,12 @@ module Enumerable
       size
     end
   end
+
+  def my_map
+    new_arr = []
+    my_each do |el|
+      new_arr << yield(el)
+    end
+    new_arr
+  end
 end

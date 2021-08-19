@@ -96,4 +96,8 @@ module Enumerable
     acc += init_value unless init_value.nil?
     acc
   end
+
+  def multiply_els(array)
+    array.my_inject { |mul, el| mul * el }
+  end
 end

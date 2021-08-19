@@ -68,3 +68,7 @@ puts(numbers.inject(99) { |sum, number| sum + number })
 puts 'my_inject'
 puts(numbers.my_inject { |sum, number| sum + number })
 puts(numbers.my_inject(99) { |sum, number| sum + number })
+
+puts "\nmultiply_els"
+numbers = [2, 4, 5]
+puts(multiply_els(numbers))

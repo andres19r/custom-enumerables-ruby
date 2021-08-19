@@ -72,3 +72,9 @@ puts(numbers.my_inject(99) { |sum, number| sum + number })
 puts "\nmultiply_els"
 numbers = [2, 4, 5]
 puts(multiply_els(numbers))
+
+puts "\nmy_map with proc"
+my_proc = proc { |i| i * i }
+numbers = [1, 2, 3, 4]
+p(numbers.my_map(&my_proc))
+p(numbers.map(&my_proc))

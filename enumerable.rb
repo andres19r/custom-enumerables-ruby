@@ -85,4 +85,15 @@ module Enumerable
     end
     new_arr
   end
+
+  def my_inject(init_value = nil)
+    i = 1
+    acc = self[0]
+    until i == size
+      acc = yield(acc, self[i])
+      i += 1
+    end
+    acc += init_value unless init_value.nil?
+    acc
+  end
 end

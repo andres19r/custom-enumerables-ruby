@@ -60,3 +60,11 @@ numbers = [1, 2, 3, 4]
 p(numbers.map { |i| i * i })
 puts 'my_map'
 p(numbers.my_map { |i| i * i })
+
+puts "\nmy_inject vs. inject"
+puts 'inject'
+puts(numbers.inject { |sum, number| sum + number })
+puts(numbers.inject(99) { |sum, number| sum + number })
+puts 'my_inject'
+puts(numbers.my_inject { |sum, number| sum + number })
+puts(numbers.my_inject(99) { |sum, number| sum + number })
